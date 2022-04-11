@@ -22,10 +22,10 @@ function getWeather(event) {
         document.querySelector("#cityName").textContent = data.location.name
         document.querySelector("#temp").textContent = data.current.temp_f
         document.querySelector(".temperature-description").textContent = data.current.condition.text
-        var iconImg = "http://"+ data.current.condition.icon
-        document.querySelector(".Iconimg").textContent=("src", "iconImg")
-        document.querySelector(".location").textContent = data.location.localtime
-        
+        var iconImg = 'http:' + data.current.condition.icon
+        document.querySelector(".Iconimg").src = iconImg;
+        document.querySelector(".location-timezone").textContent = data.location.localtime
+
     })
 
 }
