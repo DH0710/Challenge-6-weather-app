@@ -34,6 +34,7 @@ function getWeather(event) {
             document.querySelector(".forecast").textContent = data.forecast
 ;
         })
+        for (var i = 1; i < data2.forecast.forecastday.length; i++){}
     })
 
 }
