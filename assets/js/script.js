@@ -24,7 +24,7 @@ function getWeather(event) {
         document.querySelector(".temperature-description").textContent = data.current.condition.text
         var iconImg = "http://"+ data.current.condition.icon
         document.querySelector(".Iconimg").textContent=("src", "iconImg")
-        document.querySelector(".location").textContent = data.curent.location.localtime
+        document.querySelector(".location").textContent = data.location.localtime
         
     })
 
