@@ -25,9 +25,15 @@ function getWeather(event) {
         var iconImg = 'http:' + data.current.condition.icon
         document.querySelector(".Iconimg").src = iconImg;
         document.querySelector(".location-timezone").textContent = data.location.localtime
-        var getForecast = "http://api.weatherapi.com/v1/forecast.json?key=7d749c5abe52471ab2210801220804&q=" + getCity.value + "&days=5&aqi=no&alerts=no";
-        document.querySelector(".forecast").textContent = data.forecast
-
+        var getForecast = "http://api.weatherapi.com/v1/forecast.json?key=7d749c5abe52471ab2210801220804&q=" + getCity.value + "&days=5&aqi=no&alerts=no"
+        
+        fetch(getForecast).then((response) => {
+            return response.json()
+        }).then((data2) => {
+            console.log(data2)
+            document.querySelector(".forecast").textContent = data.forecast
+;
+        })
     })
 
 }
